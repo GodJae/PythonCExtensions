@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.7)
+project(init)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES
+        python_vs_c/std-wrapper.cpp
+        python_vs_c/std.cpp
+        python_vs_c/std.h)
+
+include_directories(${PYTHON_INCLUDE_DIRS})
+
+add_executable(init ${SOURCE_FILES})

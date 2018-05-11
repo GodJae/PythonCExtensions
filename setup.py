@@ -1,6 +1,11 @@
 from distutils.core import setup, Extension
 
-std_module = Extension('std', sources=['python_vs_c/std.cpp'])
+std_module = Extension('std', 
+        sources=[
+            'python_vs_c/std.cpp',
+            'python_vs_c/std-wrapper.cpp',
+            ],
+        )
 
 setup(name='std_performance',
       version='1.0',
