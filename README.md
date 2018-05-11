@@ -13,3 +13,6 @@ stdtest.py has a main method which will compare Python, NumPy and the C extensio
 
 ## Results
 ![](https://user-images.githubusercontent.com/1250095/39925817-1b2ae5fa-5568-11e8-9fc9-e2fd57108030.png)
+
+## References
+- [Speeding up Python and NumPy: C++ing the Way](https://medium.com/coding-with-clarity/speeding-up-python-and-numpy-c-ing-the-way-3b9658ed78f4)
