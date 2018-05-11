@@ -16,9 +16,9 @@ stdtest.py has a main method which will compare Python, NumPy and the C extensio
 
 <img src="https://user-images.githubusercontent.com/1250095/39925817-1b2ae5fa-5568-11e8-9fc9-e2fd57108030.png" width="70%" />
 
-10,000 ~ 30,000 elements
+100 ~ 50,000 elements
 
-<img src="https://user-images.githubusercontent.com/1250095/39926297-b6c13f36-5569-11e8-9e1a-af74443b536e.png" width="70%" />
+<img src="https://user-images.githubusercontent.com/1250095/39927553-915b471a-556d-11e8-9616-0269d888cbfa.png" width="70%" />
 
 ## References
 - [Speeding up Python and NumPy: C++ing the Way](https://medium.com/coding-with-clarity/speeding-up-python-and-numpy-c-ing-the-way-3b9658ed78f4)
