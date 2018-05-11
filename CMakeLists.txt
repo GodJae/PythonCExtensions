@@ -10,4 +10,4 @@ set(SOURCE_FILES
 
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-add_executable(init ${SOURCE_FILES})
+add_executable(std ${SOURCE_FILES})
