@@ -3,7 +3,7 @@ Using a Python C extension and comparing its performance to NumPy and Python
 
 You need to build the C extension before running this. To build and install the extension run:
 
-```python
+```
 $ python3 setup.py install
 ```
 
