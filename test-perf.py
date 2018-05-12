@@ -6,6 +6,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import std
 import stdcy
+import stdpy
 
 
 def mean(lst):
@@ -19,13 +20,14 @@ def standard_deviation(lst):
 
 
 if __name__ == '__main__':
-    start = 100; end = 1000; step = 10; include_pure_py = True
-    # start = 100; end = 50000; step = 2000; include_pure_py = False
+    # start = 100; end = 1000; step = 10; include_pure_py = True
+    start = 100; end = 50000; step = 2000; include_pure_py = False
     lens = range(start, end, step)
     py_time = []
     np_time = []
     c_time = []
     cy_time = []
+    pybind_time = []
 
     for l in lens:
         rands = [random.random() for _ in range(0, l)]
@@ -37,19 +39,23 @@ if __name__ == '__main__':
             np_time = np.append(np_time, timeit.timeit(lambda: np.std(numpy_rands), number=1000))
             c_time = np.append(c_time, timeit.timeit(lambda: std.standard_dev(rands), number=1000))
             cy_time = np.append(cy_time, timeit.timeit(lambda: stdcy.standard_dev(rands), number=1000))
+            pybind_time = np.append(pybind_time, timeit.timeit(lambda: stdpy.standard_dev(rands), number=1000))
 
-            data = np.array([np.transpose(py_time), np.transpose(np_time), np.transpose(c_time), np.transpose(cy_time)])
+            data = np.array([np.transpose(py_time), np.transpose(np_time),
+                             np.transpose(c_time), np.transpose(cy_time), np.transpose(pybind_time)])
         else:
             np_time = np.append(np_time, timeit.timeit(lambda: np.std(numpy_rands), number=1000))
             c_time = np.append(c_time, timeit.timeit(lambda: std.standard_dev(rands), number=1000))
             cy_time = np.append(cy_time, timeit.timeit(lambda: stdcy.standard_dev(rands), number=1000))
+            pybind_time = np.append(pybind_time, timeit.timeit(lambda: stdpy.standard_dev(rands), number=1000))
 
-            data = np.array([np.transpose(np_time), np.transpose(c_time), np.transpose(cy_time)])
+            data = np.array([np.transpose(np_time),
+                             np.transpose(c_time), np.transpose(cy_time), np.transpose(pybind_time)])
 
     if include_pure_py:
-        df = pd.DataFrame(data.transpose(), index=lens, columns=['Python', 'Numpy', 'C++', 'Cython'])
+        df = pd.DataFrame(data.transpose(), index=lens, columns=['Python', 'Numpy', 'C++', 'Cython', 'Pybind11'])
     else:
-        df = pd.DataFrame(data.transpose(), index=lens, columns=['Numpy', 'C++', 'Cython'])
+        df = pd.DataFrame(data.transpose(), index=lens, columns=['Numpy', 'C++', 'Cython', 'Pybind11'])
 
     plt.figure()
     df.plot()

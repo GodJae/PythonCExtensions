@@ -4,7 +4,7 @@ Using a Python C extension and comparing its performance to NumPy and Python
 You need to build the C extension before running this. To build and install the extension run:
 
 ```python
-python3 setup.py install
+$ python3 setup.py install
 ```
 
 stdtest.py has a main method which will compare Python, NumPy and the C extension for small arrays and plot the performance with matplotlib.
@@ -14,11 +14,21 @@ stdtest.py has a main method which will compare Python, NumPy and the C extensio
 ## Results
 100 ~ 1,000 elements
 
-<img src="https://user-images.githubusercontent.com/1250095/39952802-be5b3d58-55d9-11e8-86cd-0073028691ab.png" width="70%" />
+<img src="https://user-images.githubusercontent.com/1250095/39954390-9a5fed02-55f9-11e8-842b-b430bb2c3d5b.png" width="70%" />
 
 100 ~ 50,000 elements
 
-<img src="https://user-images.githubusercontent.com/1250095/39952803-be88a400-55d9-11e8-903e-172e440b32f9.png" width="70%" />
+<img src="https://user-images.githubusercontent.com/1250095/39954391-9a870180-55f9-11e8-9758-4b5650429e6e.png" width="70%" />
+
+## Dependencies
+### Cython
+```
+$ pip3 install Cython
+```
+### Pybind11
+```
+$ brew install pybind11
+```
 
 ## References
 - [Speeding up Python and NumPy: C++ing the Way](https://medium.com/coding-with-clarity/speeding-up-python-and-numpy-c-ing-the-way-3b9658ed78f4)
