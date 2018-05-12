@@ -1,13 +1,13 @@
 from distutils.core import setup, Extension
 
-std_module = Extension('std', 
+ext = Extension('std', 
         sources=[
-            'python_vs_c/std.cpp',
-            'python_vs_c/std-wrapper.cpp',
+            'std.cpp',
+            'std-wrapper.cpp',
             ],
         )
 
 setup(name='std_performance',
       version='1.0',
       description='Module for calculating standard deviation.',
-      ext_modules=[std_module])
+      ext_modules=[ext])

@@ -4,9 +4,9 @@ project(std)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        python_vs_c/std-wrapper.cpp
-        python_vs_c/std.cpp
-        python_vs_c/std.h)
+        cpp-native/std-wrapper.cpp
+        cpp-native/std.cpp
+        cpp-native/std.h)
 
 include_directories(${PYTHON_INCLUDE_DIRS})
 
