@@ -20,8 +20,8 @@ def standard_deviation(lst):
 
 
 if __name__ == '__main__':
-    # start = 100; end = 1000; step = 10; include_pure_py = True
-    start = 100; end = 50000; step = 2000; include_pure_py = False
+    start = 100; end = 1000; step = 10; include_pure_py = True
+    # start = 100; end = 50000; step = 2000; include_pure_py = False
     lens = range(start, end, step)
     py_time = []
     np_time = []

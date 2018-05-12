@@ -4,7 +4,10 @@ import pybind11
 
 ext = Extension(
     'stdpy',
-    ['stdpy.cpp'],
+    sources=[
+        'stdpy.cpp',
+        'std.cpp'
+    ],
     include_dirs=[
         pybind11.get_include(),
         pybind11.get_include(True),
