@@ -12,13 +12,11 @@ stdtest.py has a main method which will compare Python, NumPy and the C extensio
 *I've modified the wrapper to work both Python 2 and 3.*
 
 ## Results
-100 ~ 1,000 elements
+<img src="https://user-images.githubusercontent.com/1250095/39965454-da4df776-56d3-11e8-9205-ca02d1d18726.png" width="70%" />
 
-<img src="https://user-images.githubusercontent.com/1250095/39954390-9a5fed02-55f9-11e8-842b-b430bb2c3d5b.png" width="70%" />
+<img src="https://user-images.githubusercontent.com/1250095/39965456-da7554ec-56d3-11e8-8951-88c1889e9293.png" width="70%" />
 
-100 ~ 50,000 elements
-
-<img src="https://user-images.githubusercontent.com/1250095/39954391-9a870180-55f9-11e8-9758-4b5650429e6e.png" width="70%" />
+<img src="https://user-images.githubusercontent.com/1250095/39965457-da9be8be-56d3-11e8-8f32-e74dcc68db7c.png" width="70%" />
 
 ## Dependencies
 ### Cython
@@ -32,3 +30,4 @@ $ brew install pybind11
 
 ## References
 - [Speeding up Python and NumPy: C++ing the Way](https://medium.com/coding-with-clarity/speeding-up-python-and-numpy-c-ing-the-way-3b9658ed78f4)
+- [NumPy와 C++ Extensions의 성능 비교](http://docs.likejazz.com/python-numpy-extensions/)
